@@ -11,11 +11,6 @@ public class Sign : MonoBehaviour
     public bool dialogActive;
 
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetButtonDown("Interact") && dialogActive) 

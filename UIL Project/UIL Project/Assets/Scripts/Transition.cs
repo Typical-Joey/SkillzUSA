@@ -16,10 +16,6 @@ public class Transition : MonoBehaviour
         cam = Camera.main.GetComponent<CameraMovement>();
     }
 
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

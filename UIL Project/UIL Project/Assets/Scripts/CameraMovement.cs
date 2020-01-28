@@ -11,10 +11,6 @@ public class CameraMovement : MonoBehaviour
 
 
 
-    void Start()
-    {
-        
-    }
 
     void LateUpdate()
     {
