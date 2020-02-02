@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     private Animator ani;
     public PlayerState currentState;
+    public int health;
 
 
     void Start()
