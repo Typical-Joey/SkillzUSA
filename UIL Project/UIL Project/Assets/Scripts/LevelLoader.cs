@@ -9,15 +9,15 @@ public class LevelLoader : MonoBehaviour
     public float transistionTime =  1f;
     public Animator transistion;
 
-    void Update()
-    {
-        
-    }
+   public int scene;
+   public int currentScene;
 
     public void LoadNextLevel() 
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel(scene));
+        currentScene = scene;
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,6 +27,7 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+
     IEnumerator LoadLevel(int levelIndex) 
     {
         transistion.SetTrigger("Start");
@@ -34,7 +35,6 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transistionTime);
 
         SceneManager.LoadScene(levelIndex);
-
 
     }
 
